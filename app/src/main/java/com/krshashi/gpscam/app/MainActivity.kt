@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.krshashi.gpscam.app.ui.navigation.GPSCamApp
 import com.krshashi.gpscam.app.ui.theme.GPSCamTheme
 import com.krshashi.gpscam.app.utils.enableEdgeToEdgeLight
@@ -19,6 +20,7 @@ class MainActivity : ComponentActivity() {
         setAppContent()
     }
 
+    @OptIn(ExperimentalPermissionsApi::class)
     private fun setAppContent() {
         setContent {
             GPSCamTheme(darkTheme = false) {

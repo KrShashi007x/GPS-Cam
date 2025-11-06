@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">GPS Cam</string>
+    <string name="get_started_title">Getting Started – GPS Cam App Onboarding Flow</string>
+    <string name="get_started_desc">GPS Cam makes location-aware photography simple. Get started in seconds by automatically stamping your photos with accurate GPS data, adding notes, and reliving your memories on a map.</string>
+    <string name="get_started_lbl">Get started</string>
+    <string name="go_to_setting_lbl">Go to app setting</string>
+    <string name="no_permission_title">Hmmm, it seems like permission is missing!</string>
+    <string name="no_permission_desc">Go to app setting and allow Camera, Location &amp; Storage access permissions</string>
+    <string name="permission_title">GPS Cam App Requires Permission</string>
+    <string name="permission_desc">Camera, Location &amp; Storage access permissions are required by the application to function properly.</string>
+    <string name="camera_permission_lbl">Camera permission</string>
+    <string name="location_permission_lbl">Location permission</string>
+    <string name="storage_permission_lbl">Storage permission</string>
+    <string name="allow_access_lbl">Allow access</string>
+    <string name="coordinate_value">Lat %1$f Long %2$f</string>
+    <string name="fetching_details_lbl">Getting location details…</string>
 </resources>

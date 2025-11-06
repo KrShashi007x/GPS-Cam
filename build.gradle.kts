@@ -8,4 +8,5 @@ plugins {
     alias(libs.plugins.googleDaggerAndroid) apply false
     alias(libs.plugins.googleDevtoolsKSP) apply false
     alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.googleMapsplatformSecrets) apply false
 }

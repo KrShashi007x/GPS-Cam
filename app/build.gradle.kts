@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.googleDaggerAndroid)
     alias(libs.plugins.googleDevtoolsKSP)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.googleMapsplatformSecrets)
 }
 
 android {
@@ -23,6 +24,11 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    secrets {
+        propertiesFileName = "secrets.properties"
+        defaultPropertiesFileName = "local.defaults.properties"
     }
 
     buildTypes {
@@ -45,6 +51,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -58,6 +65,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.exifinterface)
+    implementation(libs.androidx.ui)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -80,4 +89,8 @@ dependencies {
     implementation (libs.hilt.android)
     ksp (libs.hilt.compiler)
     implementation (libs.androidx.hilt.navigation.compose)
+
+    implementation("androidx.camera:camera-camera2:1.5.0")
+    implementation("androidx.camera:camera-lifecycle:1.5.0")
+    implementation("androidx.camera:camera-view:1.5.0")
 }

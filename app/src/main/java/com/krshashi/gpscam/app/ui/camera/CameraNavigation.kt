@@ -15,14 +15,14 @@ fun NavHostController.navigateToCamera() {
 }
 
 fun NavGraphBuilder.cameraScreen(
-    onNavigateUp: () -> Unit,
-    onNavigateToGallery: () -> Unit
+    onNavigateToGallery: () -> Unit,
+    locationViewModel:LocationViewModel
 ) {
     composable<CameraRoute> {
         CameraScreen(
-            onNavigateUp = onNavigateUp,
             onNavigateToGallery = onNavigateToGallery,
-            modifier = Modifier.fillMaxSize()
+            modifier = Modifier.fillMaxSize(),
+            locationViewModel = locationViewModel
         )
     }
 }

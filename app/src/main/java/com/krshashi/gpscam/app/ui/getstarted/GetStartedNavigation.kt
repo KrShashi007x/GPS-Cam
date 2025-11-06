@@ -1,4 +1,4 @@
-package com.krshashi.gpscam.app.ui.permissions
+package com.krshashi.gpscam.app.ui.getstarted
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.Modifier
@@ -10,18 +10,20 @@ import kotlinx.serialization.Serializable
 @Serializable
 object PermissionsRoute
 
-fun NavController.navigateToPermissions() {
+fun NavController.navigateToGetStarted() {
     this.navigate(PermissionsRoute)
 }
 
-fun NavGraphBuilder.permissionsScreen(
+fun NavGraphBuilder.getStartedScreen(
     onNavigateUp: () -> Unit,
     onNavigateToCamera: () -> Unit,
+    onNavToAppSetting: () -> Unit
 ) {
     composable<PermissionsRoute> {
-        PermissionScreen(
+        GetStartedScreen(
             onNavigateUp = onNavigateUp,
             onNavigateToCamera = onNavigateToCamera,
+            onNavToAppSetting = onNavToAppSetting,
             modifier = Modifier.fillMaxSize()
         )
     }
